@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Resume Builder</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Build Your Resume</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Megha">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="megha@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" placeholder="+91 123456789">
+                </div>
+                <div class="form-group">
+                    <label for="summary">Profile Summary:</label>
+                    <textarea id="summary" rows="5" placeholder="A brief summary of your professional background..."></textarea>
+                </div>
+
+                <h3>Education</h3>
+                <div id="educationContainer">
+                    <div class="education-item">
+                        <input type="text" class="degree" placeholder="Degree/Certification">
+                        <input type="text" class="university" placeholder="University/Institution">
+                        <input type="text" class="edu-years" placeholder="Years (e.g., 2018-2022)">
+                    </div>
+                </div>
+                <button type="button" id="addEducation">Add Education</button>
+
+                <h3>Skills</h3>
+                <div class="form-group skills-group">
+                    <input type="text" id="skillInput" placeholder="Add a skill (e.g., JavaScript)">
+                    <button type="button" id="addSkill">Add Skill</button>
+                    <div id="skillsList" class="tag-list"></div>
+                </div>
+
+                <h3>Experience</h3>
+                <div id="experienceContainer">
+                    <div class="experience-item">
+                        <input type="text" class="job-title" placeholder="Job Title">
+                        <input type="text" class="company" placeholder="Company">
+                        <input type="text" class="exp-years" placeholder="Years (e.g., 2022-Present)">
+                        <textarea class="responsibilities" rows="3" placeholder="Key responsibilities and achievements..."></textarea>
+                    </div>
+                </div>
+                <button type="button" id="addExperience">Add Experience</button>
+
+                <div class="form-actions">
+                    <button type="reset" id="clearForm">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="resume-preview-section">
+            <h2>Live Resume Preview</h2>
+            <div id="resumePreview" class="resume-paper">
+                <div class="resume-header">
+                    <h2 id="previewName">Your Name</h2>
+                    <p><span id="previewEmail">your.email@example.com</span> | <span id="previewPhone">+1234567890</span></p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Profile Summary</h3>
+                    <p id="previewSummary">A brief summary of your professional background will appear here.</p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <ul id="previewEducation">
+                        <li><strong>Degree/Certification</strong> at University/Institution (Years)</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Skills</h3>
+                    <ul id="previewSkills" class="skills-grid">
+                        <li>Example Skill</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Experience</h3>
+                    <div id="previewExperience">
+                        <div class="experience-entry">
+                            <h4>Job Title at Company</h4>
+                            <p class="experience-years">Years (e.g., 2022-Present)</p>
+                            <p class="experience-responsibilities">Key responsibilities and achievements will appear here.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                <div class="form-actions">
+                    <button type="button" id="downloadResume">Download / Print Resume</button>
+                </div>
+
+        </section>
+    </main>
+
+    <script src="resume.js"></script>
+</body>
+</html>
